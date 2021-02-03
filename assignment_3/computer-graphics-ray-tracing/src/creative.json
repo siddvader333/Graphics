@@ -1,0 +1,233 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 3,
+    "eye": [0,0,4],
+    "up": [0,1,0],
+    "look": [0,0,-1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+  "materials": [
+    {
+      "name": "orange plastic",
+      "ka": [1.0, 0.7, 0.2],
+      "kd": [1.0, 0.7, 0.2],
+      "ks": [0.8,0.8,0.8],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 1000
+    },
+    {
+      "name": "Lambertian blue",
+      "ka": [0.2, 0.3, 0.8],
+      "kd": [0.2, 0.3, 0.8],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.3,0.3,0.3],
+      "phong_exponent": 20
+    },  
+    {
+      "name": "green metal",
+      "ka": [0.301961,0.686275,0.290196],
+      "kd": [0.301961,0.686275,0.290196],
+      "ks": [0.301961,0.686275,0.290196],
+      "km": [0.301961,0.686275,0.290196],
+      "phong_exponent": 2000
+    },
+    {
+      "name": "red metal",
+      "ka": [0.894118,0.101961,0.109804],
+      "kd": [0.894118,0.101961,0.109804],
+      "ks": [0.894118,0.101961,0.109804],
+      "km": [0.894118,0.101961,0.109804],
+      "phong_exponent": 2000
+    },    
+    {
+      "name": "black paint",
+      "ka": [0.1,0.1,0.1],
+      "kd": [0.1,0.1,0.1],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.0,0.0,0.0],
+      "phong_exponent": 200
+    },
+    {
+      "name": "Lambertian gray",
+      "ka": [0.2, 0.2, 0.2],
+      "kd": [0.8, 0.8, 0.8],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 20
+    }
+  ],
+  "lights":[
+    {
+      "type": "directional",
+      "direction": [0,0,-1],
+      "color": [1.0,1.0, 1.0]
+    },
+    {
+      "type": "point",
+      "position": [-10,20,10],
+      "color": [0.8,0.8,0.8]
+    }
+  ],
+  "objects": [
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [0, 0.3, 0],
+      "radius": 0.125
+    },
+    {
+      "type": "sphere",
+      "material": "black paint",
+      "center": [-0.05, 0.32, 0.1],
+      "radius": 0.033
+    },
+    {
+      "type": "sphere",
+      "material": "black paint",
+      "center": [0.05, 0.32, 0.1],
+      "radius": 0.033
+    },  
+
+    {
+      "type": "sphere",
+      "material": "Lambertian gray",
+      "center": [-0.055, 0.325, 0.2],
+      "radius": 0.01
+    },
+    {
+      "type": "sphere",
+      "material": "Lambertian gray",
+      "center": [0.045, 0.325, 0.2],
+      "radius": 0.01
+    },  
+    {
+      "type": "sphere",
+      "material": "red metal",
+      "center": [-0.08, 0.25, 0.1],
+      "radius": 0.03
+    },
+    {
+      "type": "sphere",
+      "material": "red metal",
+      "center": [0.08, 0.25, 0.1],
+      "radius": 0.03
+    },  
+
+    {
+      "type": "triangle",
+      "corners": [
+        [-0.1,0.33,-0.1],
+        [0,0.35,-0.1],
+        [-0.2,0.6,0]
+      ],
+      "material": "orange plastic"
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [0,0.35, -0.1],
+        [0.1, 0.33, -0.1],
+        [0.2,0.6,0]
+      ],
+      "material": "orange plastic"
+    },
+
+    {
+      "type": "triangle",
+      "corners": [
+        [-0.15,0.45,0.05],
+        [-0.1,0.48, 0.05],
+        [-0.2,0.6,0.05]
+      ],
+      "material": "black paint"
+    },
+    {
+      "type": "triangle",
+      "corners": [
+        [0.1,0.48, 0.05],
+        [0.15, 0.45, 0.05],
+        [0.2,0.6,0.05]
+      ],
+      "material": "black paint"
+    },
+
+    {
+      "type": "triangle",
+      "corners": [
+        [-0.01,0.28, 0.15],
+        [0.01, 0.28, 0.15],
+        [0 ,0.3,0.15]
+      ],
+      "material": "black paint"
+    },
+
+    {
+      "type": "triangle",
+      "corners": [
+        [-0.1,0.37, 0.105],
+        [0.1, 0.37, 0.105],
+        [0 ,0.55, 0.105]
+      ],
+      "material": "red metal"
+    },
+    {
+      "type": "sphere",
+      "material": "Lambertian gray",
+      "center": [0, 0.5, 0.2],
+      "radius": 0.04
+    },
+
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [0, 0.075, -1],
+      "radius": 0.2
+    },
+
+
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [-0.125, 0.075, 0.05],
+      "radius": 0.05
+    },
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [0.125, 0.075, 0.05],
+      "radius": 0.05
+    },   
+
+
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [-0.1, -0.1, -0.1],
+      "radius": 0.05
+    },
+    {
+      "type": "sphere",
+      "material": "orange plastic",
+      "center": [0.1, -0.1, -0.1],
+      "radius": 0.05
+    },   
+
+ 
+
+    {
+      "type": "plane",
+      "material": "Lambertian blue",
+      "point": [0,0, -1000],
+      "normal": [0,0,1]
+    },
+
+    {
+      "type": "plane",
+      "material": "green metal",
+      "point": [0,-1, 0],
+      "normal": [0,1,0]
+    }
+  ]
+}

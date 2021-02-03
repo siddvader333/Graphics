@@ -1,0 +1,4 @@
+/home/siddvader333/Desktop/graphics/assignment_3/computer-graphics-ray-tracing/build-release/CMakeFiles/edit_cache.dir
+/home/siddvader333/Desktop/graphics/assignment_3/computer-graphics-ray-tracing/build-release/CMakeFiles/rebuild_cache.dir
+/home/siddvader333/Desktop/graphics/assignment_3/computer-graphics-ray-tracing/build-release/CMakeFiles/hw2.dir
+/home/siddvader333/Desktop/graphics/assignment_3/computer-graphics-ray-tracing/build-release/CMakeFiles/raytracing.dir
