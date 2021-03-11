@@ -27,14 +27,15 @@ void main()
 {
 
   pos_fs_in = interpolate(gl_TessCoord, pos_es_in[0], pos_es_in[1], pos_es_in[2]);
-  sphere_fs_in = pos_fs_in.xyz;
+  vec4 int_vector = vec4(normalize(interpolate(gl_TessCoord, pos_es_in[0].xyz, pos_es_in[1].xyz, pos_es_in[2].xyz)), 1.0);
+  sphere_fs_in = int_vector.xyz;
 
   //transforms 
   mat4 m_v_transform = view*model(is_moon, animation_seconds);
   mat4 norm_transform = transpose(inverse(m_v_transform));
 
-  view_pos_fs_in = m_v_transform * sphere_fs_in;
-  normal_fs_in = norm_transform * sphere_fs_in;
+  view_pos_fs_in = m_v_transform * int_vector;
+  normal_fs_in = (norm_transform * int_vector).xyz;
 
   pos_fs_in = proj * view_pos_fs_in;
 

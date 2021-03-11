@@ -22,10 +22,10 @@ vec3 blinn_phong(
 {
   /////////////////////////////////////////////////////////////////////////////
   // Replace with your code 
-  float ambient_int= 0.01;
-  float term1  = ka* ambient_int;
-  float term2 = kd * max(0, dot(n,1));
-  float term3 = ks * pow(max(0, dot(n, normalize(v+1))), p);
+  float ambient_int = 0.01;
+  vec3 term1 = ka* ambient_int;
+  vec3 term2 = kd * max(0.0, dot(n,l));
+  vec3 term3 = ks * pow(max(0, dot(n, normalize(v+1))), p);
   return term1 + term2 + term3;
   /////////////////////////////////////////////////////////////////////////////
 }

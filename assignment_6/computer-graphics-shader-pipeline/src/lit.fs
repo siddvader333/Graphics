@@ -31,13 +31,13 @@ void main()
     kd = vec3(0.6);
     ks = vec3(0.3);
     p = 100;
-    base vec3(0.4);
+    base = vec3(0.4);
   }else{
     ka = vec3(0.1);
     kd = vec3(0.7);
     ks = vec3(0.9);
     p = 1000;
-    base vec3(0,0,1);
+    base = vec3(0,0,1);
   }
 
   color = base * blinn_phong(ka, kd, ks, p, n, v, l);
