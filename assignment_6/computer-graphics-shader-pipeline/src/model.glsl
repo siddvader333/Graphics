@@ -10,7 +10,7 @@
 mat4 model(bool is_moon, float time)
 {
 
-  if !is_moon
+  if (!is_moon)
     return identity(); //if not moon just return identity
 
   float angle_degrees = (mod(time, 4.0)/4) *360;
@@ -18,7 +18,7 @@ mat4 model(bool is_moon, float time)
 
   mat4 rotation_matrix = rotate_about_y(angle_radians);
 
-  mat4 translation_matrix = translate(vec3(2,0,2))); 
+  mat4 translation_matrix = translate(vec3(2,0,2)); 
 
   mat4 resize_matrix = uniform_scale(0.3);
 

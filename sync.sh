@@ -1,5 +1,4 @@
-#!/bin/bash 
-
+#!/bin/bash
 ASSIGNMENT_PATH="assignment_$1"
 ASSIGNMENT_NAMES=(
     "1" 
@@ -17,7 +16,7 @@ echo ${ASSIGNMENT_NAMES[$1-1]}
 
 git pull 
 cd build
-gcmake ..
+cmake ..
 make
 
 
