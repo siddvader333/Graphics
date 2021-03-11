@@ -25,11 +25,21 @@ out vec3 sphere_fs_in;
 // expects: interpolat, model, 
 void main()
 {
-  /////////////////////////////////////////////////////////////////////////////
-  // Replace with your code 
+
   pos_fs_in = interpolate(gl_TessCoord, pos_es_in[0], pos_es_in[1], pos_es_in[2]);
+  sphere_fs_in = pos_fs_in.xyz;
+
+  //transforms 
+  mat4 m_v_transform = view*model(is_moon, animation_seconds);
+  mat4 norm_transform = transpose(inverse(m_v_transform));
+
+  view_pos_fs_in = m_v_transform * sphere_fs_in;
+  normal_fs_in = norm_transform * sphere_fs_in;
+
+  pos_fs_in = proj * view_pos_fs_in;
+
   gl_Position = pos_fs_in;
-  /////////////////////////////////////////////////////////////////////////////
+
 }
 
 

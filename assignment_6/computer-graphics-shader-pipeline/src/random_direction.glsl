@@ -10,6 +10,21 @@ vec3 random_direction( vec3 seed)
 {
   /////////////////////////////////////////////////////////////////////////////
   // Replace with your code 
-  return vec3(1,0,0);
+  vec2 rand_coords = random2(seed);
+  float x = rand_coords.x;
+  float y = rand_coords.y;
+
+  //converting to spherical 
+  float new_x = sin (M_PI*y) * cos(2*M_PI*x);
+  float new_y = sin(M_PI*y) *sin(2*M_PI*y);
+  float new_z = cos(M_PI*y);
+
+  return normalize(vec3(new_x, new_y, new_z));
+
+
+  
+
+
+
   /////////////////////////////////////////////////////////////////////////////
 }
